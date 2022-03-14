@@ -1,0 +1,55 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  background-color: rgb(0, 140, 255);
+  width: 400px;
+  height: 400px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.062);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  position: absolute;
+
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid rgb(255, 255, 255);
+
+  animation-name: a0;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#s1 {
+  animation-name: a1;
+}
+
+@keyframes a0 {
+  70% {
+    transform: rotate(180deg);
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+@keyframes a1 {
+  50% {
+    transform: rotate(160deg);
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
