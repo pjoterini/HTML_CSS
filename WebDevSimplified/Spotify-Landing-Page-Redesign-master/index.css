@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-main-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.home-main-section .img-wrapper {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.home-main-section .lady-image {
+  background-image: url(/Spotify-Landing-Page-Redesign-master/images/landing-page-girl.png);
+  flex-grow: 1;
+  max-height: 70vh;
+  min-width: 30vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.home-main-section .call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .home-main-section .img-wrapper {
+    display: none;
+  }
+
+  .home-main-section {
+    justify-content: center;
+  }
+}
+
+.home-page-circle-1 {
+  position: absolute;
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
+  background-color: rgba(170, 121, 170, 0.123);
+  left: 5vw;
+  bottom: 5vh;
+  z-index: -1;
+}
+
+.home-page-circle-2 {
+  position: absolute;
+  height: 7em;
+  width: 7em;
+  border-radius: 50%;
+  background-color: rgba(124, 61, 124, 0.123);
+  left: 40vw;
+  top: 15vh;
+  z-index: -1;
+}
+
+.home-page-circle-3 {
+  position: absolute;
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+  background-color: rgba(104, 33, 104, 0.123);
+  right: -3em;
+  bottom: -5em;
+  z-index: -1;
+}
