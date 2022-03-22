@@ -21,8 +21,7 @@ a {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: #fff;
+  @include set-background($primary-color);
   height: 600px;
 
   &-content {
@@ -39,14 +38,10 @@ a {
       font-size: 50px;
       line-height: 1.2;
     }
-
-    p {
-      margin-top: 20px 0;
-    }
   }
 
   a {
-    color: white;
+    color: set-text-color($primary-color);
   }
   a:hover {
     color: $secondary-color;
@@ -73,3 +68,5 @@ a {
   padding: 0 30px;
   margin: 0 auto;
 }
+
+@import "mobile";

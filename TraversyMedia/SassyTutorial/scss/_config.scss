@@ -2,3 +2,34 @@ $light-color: #f4f4f4;
 $font-stack: Arial, helvetica, sans-serif;
 $primary-color: #0e6cff;
 $secondary-color: #ff8700;
+
+// set text color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// Margin & padding classes
+
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin-top: #{$space}rem 0;
+  }
+  .mx-#{$space} {
+    margin-top: 0 #{$space}rem;
+  }
+}
