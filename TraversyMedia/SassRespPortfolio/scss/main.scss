@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -11,7 +10,7 @@ body {
   @include background;
 
   background: $primary-color;
-  color: white;
+  color: set-text-color($primary-color);
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -20,7 +19,8 @@ body {
 // HEADINGS
 h1,
 h2,
-h3 {
+h3,
+h6 {
   font-weight: 400;
 
   &.lg-heading {
@@ -51,7 +51,8 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
   &#home {
     overflow: hidden;
@@ -74,3 +75,133 @@ main {
     }
   }
 }
+
+// ABOUT PAGE
+
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bio-image bio bio"
+    "job-1 job-2 job-3";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.bio-image {
+  grid-area: bio-image;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 3px $secondary-color;
+}
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.job-1 {
+  grid-area: job-1;
+}
+.job-2 {
+  grid-area: job-2;
+}
+.job-3 {
+  grid-area: job-3;
+}
+
+.about-info {
+  width: 80%;
+  margin: auto;
+}
+h6 {
+  margin: 20px 0;
+}
+
+.job {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+// WORK PAGE
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// CONTACT PAGE
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// BUTTON STYLES
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import "mobile";
