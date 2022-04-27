@@ -1,0 +1,31 @@
+@use '../util/' as u;
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: u.rem(100);
+    background: var(--white);
+
+    h1 {
+        color: var(--black);
+        font-size: u.rem(36);
+        font-weight: 600;
+    }
+
+    .row {
+        
+        .course-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: u.rem(10);
+            margin-bottom: 5%;
+            padding: u.rem(20) u.rem(12);
+            box-sizing: border-box;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba($color: #b5b5b5, $alpha: 1.0);
+        }
+    }
+}
