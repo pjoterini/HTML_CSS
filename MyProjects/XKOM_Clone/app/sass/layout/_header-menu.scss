@@ -1,0 +1,52 @@
+@use '../util' as u;
+
+
+.header-menu {
+    width: 100%;
+    background-color: var(--header-color);
+    box-shadow: rgba(0, 0, 0, 0.64) 0px 2px 8px -5px;
+
+    .header-menu-items {
+        width: 80%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        
+        @include u.breakpoint-down(large) {
+            width: 95%;
+        }
+        @include u.breakpoint-down(medium) {
+            display: none;
+        }
+        
+        a {
+            padding: u.rem(10);
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            color: var(--text-color);
+            
+            i {
+                @include u.breakpoint-down(large) {
+                    display: none;
+                }
+            }
+            
+
+            p {
+                font-weight: 400;
+                font-size: u.rem(13);
+                padding: u.rem(10);
+
+                @include u.breakpoint-down(large) {
+                    padding: u.rem(5);
+                }
+               
+            }
+        }
+
+        a.pink {
+            color: var(--pink);
+        }
+    }
+}
