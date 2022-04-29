@@ -10,32 +10,126 @@
     }
 
     .slides-container {
-        height: u.rem(200);
+        position: relative;
+        height: u.rem(344);
+        width: 100%;
+
         border-radius: u.rem(25);
         overflow: hidden;
         background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.64) 0px 2px 8px -5px;
 
-        .slide {
+        .slides {
+            position: absolute;
+            top: 0;
+            left: 0;
             height: 100%;
             width: 100%;
-        }
+            transition: transform 0.5s ease-in-out;
 
-        .s1 {
-            background-image: url(https://source.unsplash.com/random);
-        }
 
+            .slide {
+                height: 100%;
+                width: 100%;
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    
+            .s1 {
+                background-image: url(../../../images/normal\,\,majowka-2022-top_1651042112.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .s2 {
+                background-image: url(../../../images/normal\,\,laptopy-q2-2022-top_1650870896.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 100%;
+            }
+            .s3 {
+                background-image: url(../../../images/normal\,\,telewizor-dvbt2_1650445928.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 200%;
+            }
+            .s4 {
+                background-image: url(../../../images/normal\,\,uchwyc-blask-z-realme-9_1651143892.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 300%;
+            }
+            .s5 {
+                background-image: url(../../../images/normal\,\,samsung-shield-t7-top_1651046747.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 400%;
+            }
+            .s6 {
+                background-image: url(../../../images/normal\,\,majowka-top-x-kom-1570x344_1650023976.webp);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 500%;
+            }
+        }
+    }
+
+    .btn{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+        z-index: 2;
+        background-color: var(--background-color);
+        overflow: visible;
+
+        i {
+            color: var(--gray);
+        }
+    }
+
+    .slider-btn-left {
+        top: u.rem(350);
+        left: u.rem(173);
         
+        @include u.breakpoint-down(large) {
+            left: u.rem(10); 
+        }
+    }
+    .slider-btn-right {
+        top: u.rem(350);
+        right: u.rem(173);
+        
+        @include u.breakpoint-down(large) {
+            right: u.rem(10); 
+        }
     }
 
     .slider-texts {
-        margin-top: u.rem(20);
+        
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         p {
             font-size: u.rem(13);
             color: var(--gray);
+            padding-top: u.rem(20);
+        }
+
+        .active-slider-text {
+            border-top: 5px solid var(--pink);
+            color: var(--pink);
+            padding-top: u.rem(15);
+            font-weight: 700;
         }
     }
 }

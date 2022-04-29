@@ -21,7 +21,7 @@
     />
 
     <link rel="stylesheet" href="/dist/style.css" />
-    <script src="/app/js/script.js"></script>
+    <script defer src="/app/js/script.js"></script>
 
     <title>Y-lap.pl - Sklep komputerowy</title>
   </head>
@@ -129,26 +129,31 @@
 
     <section class="slider">
       <div class="slides-container">
-        <div class="slide s1"></div>
-        <div class="slide s2"></div>
-        <div class="slide s3"></div>
-        <div class="slide s4"></div>
-        <div class="slide s5"></div>
-        <div class="slide s6"></div>
+        <div class="slides">
+          <div class="slide s1"></div>
+          <div class="slide s2"></div>
+          <div class="slide s3"></div>
+          <div class="slide s4"></div>
+          <div class="slide s5"></div>
+          <div class="slide s6"></div>
+        </div>
       </div>
-      <button class="btn slider-btn">
+      <button class="btn slider-btn-left">
         <i class="fa-solid fa-angle-left"></i>
       </button>
-      <button class="btn slider-btn">
+      <button class="btn slider-btn-right">
         <i class="fa-solid fa-angle-right"></i>
       </button>
+
       <div class="slider-texts">
-        <p>rabaty na majówkę 40%</p>
-        <p>laptopy taniej nawet 1500zł</p>
-        <p>250zł na TV z DVB-T2</p>
-        <p>tydzień promocji Samsung</p>
-        <p>Samsung T7 Shield</p>
-        <p>majówka z al.to</p>
+        <p class="slider-text slider-text-1 active-slider-text">
+          rabaty na majówkę 40%
+        </p>
+        <p class="slider-text slider-text-2">laptopy taniej nawet 1500zł</p>
+        <p class="slider-text slider-text-3">250zł na TV z DVB-T2</p>
+        <p class="slider-text slider-text-4">tydzień promocji Samsung</p>
+        <p class="slider-text slider-text-5">Samsung T7 Shield</p>
+        <p class="slider-text slider-text-6">majówka z al.to</p>
       </div>
     </section>
   </body>
