@@ -98,7 +98,7 @@
 
     .slider-btn-left {
         top: u.rem(350);
-        left: u.rem(173);
+        left: u.rem(185);
         
         @include u.breakpoint-down(large) {
             left: u.rem(10); 
@@ -106,7 +106,7 @@
     }
     .slider-btn-right {
         top: u.rem(350);
-        right: u.rem(173);
+        right: u.rem(185);
         
         @include u.breakpoint-down(large) {
             right: u.rem(10); 

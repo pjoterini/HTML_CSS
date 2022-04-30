@@ -4,6 +4,7 @@ h1, h2, h3 {
     font-weight: 700;
     line-height: 1.1;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1 {
@@ -11,13 +12,34 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(u.rem(22), u.rem(14) + 1.5vw, u.rem(36));
+    font-size: u.rem(26);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: u.rem(18);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+h4 {
+    font-size: u.rem(18);
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.crossed-text {
+    font-size: u.rem(13);
+    line-height: u.rem(13);
+    color: var(--text-crossed);
+    text-decoration: line-through;
 }
 
 p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: u.rem(16)
+    font-size: u.rem(13)
 }
 
 a, a:visited, a:active {
@@ -33,4 +55,9 @@ ul {
     background-color: var(--gray);
     color: white;
     padding: u.rem(10);
+}
+
+.headline {
+    border-top: 1px solid var(--light-gray);
+    padding-top: u.rem(20);
 }
