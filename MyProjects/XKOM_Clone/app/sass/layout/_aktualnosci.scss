@@ -1,6 +1,6 @@
 @use '../util' as u;
 
-.promocje {
+.aktualnosci {
     margin-top: u.rem(40);
     width: 80%;
     margin-inline: auto;
@@ -42,7 +42,7 @@
                 border-radius: u.rem(12);
                 
                 .ad-cart {
-                    height: u.rem(250);
+                    height: u.rem(200);
                     padding: u.rem(100);
                     background-position: center;
                     background-size: contain;
@@ -50,34 +50,38 @@
                 }
     
                 .ac1 {
-                    background-image: url(/images/section-2/1.webp);
+                    background-image: url(/images/section-3/1.webp);
                 }
                 .ac2 {
-                    background-image: url(/images/section-2/2.webp);
+                    background-image: url(/images/section-3/2.webp);
+                }
+                .ac3 {
+                    background-image: url(/images/section-3/3.webp);
+                }
+                .ac4 {
+                    background-image: url(/images/section-3/4.webp);
                 }
             }    
 
-            .ad-cart-padding-zero {
-                -webkit-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                -moz-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                border-radius: u.rem(12);
-                overflow: hidden;
+            // .ad-cart-padding-zero {
+            //     -webkit-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
+            //     -moz-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
+            //     box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
+            //     border-radius: u.rem(12);
+            //     overflow: hidden;
 
-                .ad-cart {
-                    height: u.rem(290);
-                    padding: u.rem(100);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-
-                .ac3 {
-                    background-image: url(/images/section-2/3.webp);
-                }
-                .ac4 {
-                    background-image: url(/images/section-2/4.webp);
-                }
+            //     .ad-cart {
+            //         height: u.rem(290);
+            //         padding: u.rem(100);
+            //         background-position: center;
+            //         background-size: cover;
+            //         background-repeat: no-repeat;
+            //     }
+            // }
+            .gray-text {
+                margin-top: u.rem(10);
+                font-size: u.rem(11);
+                color: var(--gray)
             }
 
             h3 {
