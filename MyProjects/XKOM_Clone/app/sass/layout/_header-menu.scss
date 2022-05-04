@@ -9,6 +9,7 @@
     .header-menu-items {
         width: 80%;
         margin-inline: auto;
+        margin-top: 0;
         display: flex;
         align-items: center;
         
@@ -27,6 +28,8 @@
             color: var(--text-color);
             
             i {
+                color: var(--gray);
+                
                 @include u.breakpoint-down(large) {
                     display: none;
                 }
@@ -47,6 +50,10 @@
 
         a.pink {
             color: var(--pink);
+            
+            i {
+                color: var(--pink); 
+            }
         }
     }
 }

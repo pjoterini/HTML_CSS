@@ -1,0 +1,18 @@
+@use '../util' as u;
+
+.footer {
+    margin-top: u.rem(70);
+    width: 80%;
+    margin-inline: auto;
+
+    @include u.breakpoint-down(large) {
+        width: 95%;
+    }
+
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin-bottom: u.rem(30);
+    }
+}

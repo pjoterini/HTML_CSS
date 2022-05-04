@@ -4,9 +4,41 @@
     margin-top: u.rem(20);
     width: 80%;
     margin-inline: auto;
+    position: relative;
     
     @include u.breakpoint-down(large) {
         width: 95%;
+    }
+
+    .btn-container {
+        position: relative;
+
+        .btn{
+            top: 50%;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+            z-index: 2;
+            background-color: var(--background-color);
+            
+            i {
+                color: var(--gray);
+            }
+        }
+
+        .btn:hover {
+            background-color: var(--light-gray);
+        }
+    
+        .slider-btn-left {
+            transform: translate(-50%, -50%);
+        }
+        .slider-btn-right {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
     }
 
     .slides-container {
@@ -80,39 +112,7 @@
             }
         }
     }
-
-    .btn{
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
-        z-index: 2;
-        background-color: var(--background-color);
-        overflow: visible;
-
-        i {
-            color: var(--gray);
-        }
-    }
-
-    .slider-btn-left {
-        top: u.rem(350);
-        left: u.rem(185);
-        
-        @include u.breakpoint-down(large) {
-            left: u.rem(10); 
-        }
-    }
-    .slider-btn-right {
-        top: u.rem(350);
-        right: u.rem(185);
-        
-        @include u.breakpoint-down(large) {
-            right: u.rem(10); 
-        }
-    }
-
+    
     .slider-texts {
         
         display: flex;

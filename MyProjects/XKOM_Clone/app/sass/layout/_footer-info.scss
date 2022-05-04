@@ -1,0 +1,56 @@
+@use '../util' as u;
+
+.footer-info {
+    margin-top: u.rem(70);
+    width: 80%;
+    margin-inline: auto;
+
+    @include u.breakpoint-down(large) {
+        width: 95%;
+    }
+
+    .footer-info-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        h3, p {
+            margin-bottom: u.rem(20);
+        }
+
+        h3 {
+            font-size: u.rem(16);
+        }
+
+        p {
+            font-size: u.rem(14);
+        }
+
+        .kontakt {
+
+            i {
+                margin-right: u.rem(15);
+            }
+
+            .phone-number, p {
+                margin-bottom: u.rem(20);
+                display: flex;
+                align-items: flex-start;
+
+                .phone-details {
+                    display: flex;
+                    flex-direction: column;
+                    width: u.rem(140);
+
+                    .pn-pt, .sob-niedz {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .socials {
+            margin-top: u.rem(40);
+        }
+    }
+}

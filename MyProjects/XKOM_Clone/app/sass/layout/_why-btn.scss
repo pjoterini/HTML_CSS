@@ -1,0 +1,25 @@
+@use '../util' as u;
+
+.why-btn {
+ 
+    @include u.breakpoint-down(large) {
+        display: none;
+    }
+
+    .open-why-btn {
+        position: absolute;
+        padding: u.rem(20);
+        right: u.rem(-55);
+        top: 30vh;
+        transform: rotate(-90deg);
+        background-color: rgb(243, 243, 243);
+        box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 10px -5px;
+        border-radius: u.rem(14);
+        border: none;
+        font-size: u.rem(14);
+        color: var(--gray);
+        font-weight: 500;
+    }
+}   
+
+    
