@@ -122,3 +122,44 @@ const changeSlide = (direction) => {
     }
     
 }
+
+// WHY CART
+
+let openWhyBtn = document.querySelector('.open-why-btn')
+let whyCart = document.querySelector('.why-cart')
+
+openWhyBtn.addEventListener('click', () => {
+    openWhyBtn.classList.add('hidden')
+    whyCart.classList.remove('hidden')
+})
+
+whyCart.addEventListener('click', () => {
+    whyCart.classList.add('hidden')
+    openWhyBtn.classList.remove('hidden')
+})
+
+// TIMER
+
+
+
+const countdown = () => {
+    const countDate = new Date('May 6, 2025 00:00:00').getTime();
+    const now = new Date().getTime();
+    const gap = countDate - now;
+
+    const second = 1000
+    const minute = second * 60
+    const hour = minute * 60 
+    const day = hour * 24
+
+    const textDay = Math.floor(gap / day)
+    const textHour = Math.floor((gap % day) / hour)
+    const textMinute = Math.floor((gap % hour) / minute)
+    const textSecond = Math.floor((gap % minute) / second)
+
+    document.querySelector('.hours').innerText = textHour
+    document.querySelector('.minutes').innerText = textMinute
+    document.querySelector('.seconds').innerText = textSecond
+}
+
+setInterval(countdown, 1000)
