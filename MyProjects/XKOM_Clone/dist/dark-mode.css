@@ -1,0 +1,43 @@
+:root {
+    --background-color: rgb(43, 43, 43);
+    --text-color:rgb(255, 255, 255);
+    --text-color-black:rgb(255, 255, 255);
+    --text-color-white:rgb(0, 0, 0);
+    --text-crossed:rgb(112,112,112);
+    --header-color:rgb(77, 77, 77);
+    --gray: rgb(175, 175, 175);
+    --pink: rgb(233, 66, 169);
+    --blue: rgb(56, 144, 252);
+    --light-gray:rgb(77, 77, 77);
+    --searchbar:rgb(77, 77, 77);
+    
+    --fast: all .5s ease-in-out;
+}
+
+input {
+    background-color: rgb(43, 43, 43);
+    color: rgb(255, 255, 255);
+}
+
+.cart-img {
+    border-radius: 12px;
+    background-color: white;
+}
+
+.item-cart:hover {
+    background-color: rgba(208, 208, 208, 0.108);
+}
+
+.hs-img {
+   border-radius: 12px;
+   background-color: white;
+   overflow: hidden;
+}
+
+.btn {
+    border: solid 2px rgb(156, 156, 156);
+}
+
+.ad-cart-padding {
+    background-color: white;
+}

@@ -1,3 +1,68 @@
+// DARK MODE
+
+const lightModeBtn = document.querySelector('.light')
+const darkModeBtn = document.querySelector('.dark')
+
+let link = document.createElement('link')
+link.rel = 'stylesheet'
+link.href = '/dist/dark-mode.css'
+
+darkModeBtn.addEventListener('click', () => {
+  darkModeBtn.classList.add('active')
+  lightModeBtn.classList.remove('active')
+  document.head.appendChild(link)
+})
+
+lightModeBtn.addEventListener('click', () => {
+  darkModeBtn.classList.remove('active')
+  lightModeBtn.classList.add('active')
+  document.head.removeChild(link)
+})
+
+// SEARCHBAR 
+
+const searchTexts = document.querySelectorAll('.search-text')
+let itemInfoContainer = document.querySelector('.item-info-container')
+const itemInfoCard = document.querySelector('[data-item-info-card')
+const searchInput = document.querySelector('[data-search]')
+
+searchTexts.forEach(searchText => {
+    const card = itemInfoCard.content.cloneNode(true).children[0]
+    const text = card.querySelector('[data-text]')
+    text.textContent = searchText.innerText
+    console.log(text.innerText)
+    itemInfoContainer.append(card)
+})
+
+let cards = itemInfoContainer.querySelectorAll('.item-info-card')
+
+searchInput.addEventListener('input', (e) => {
+    itemInfoContainer.classList.remove('hide')
+    
+    const value = e.target.value.toLowerCase()
+    console.log(value)
+    cards.forEach(card => {
+        const isVisible = card.innerText.toLowerCase().includes(value)
+        card.classList.toggle('hide', !isVisible)
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SLIDER
+
 const sliderContainer = document.querySelector('.slides-container')
 const slides = document.querySelector('.slides')
 
@@ -139,8 +204,6 @@ whyCart.addEventListener('click', () => {
 })
 
 // TIMER
-
-
 
 const countdown = () => {
     const countDate = new Date('May 6, 2025 00:00:00').getTime();
