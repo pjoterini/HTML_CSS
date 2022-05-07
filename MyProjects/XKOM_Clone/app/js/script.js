@@ -30,7 +30,6 @@ searchTexts.forEach(searchText => {
     const card = itemInfoCard.content.cloneNode(true).children[0]
     const text = card.querySelector('[data-text]')
     text.textContent = searchText.innerText
-    console.log(text.innerText)
     itemInfoContainer.append(card)
 })
 
@@ -45,6 +44,11 @@ searchInput.addEventListener('input', (e) => {
         const isVisible = card.innerText.toLowerCase().includes(value)
         card.classList.toggle('hide', !isVisible)
     })
+
+    if (value === '') {
+        itemInfoContainer.classList.add('hide')
+    }
+    
 })
 
 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/dist/style.css" />
+    <script defer src="/app/js/script.js"></script>
+
+    <title>Y-lap.pl - Sklep komputerowy</title>
+  </head>
+  <body>
+    <!-- WHY BTN -->
+
+    <section class="why-btn">
+      <button class="open-why-btn">Dlaczego Y-LAP?</button>
+      <div class="why-cart hidden">
+        <div class="why-cart-content gray"><p>Dlaczego Y-LAP?</p></div>
+        <div class="why-cart-content">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <p>99% pozytywnych opinii</p>
+        </div>
+        <div class="why-cart-content">
+          <i class="fa-solid fa-globe"></i>
+          <p>20 lat na rynku</p>
+        </div>
+        <div class="why-cart-content">
+          <i class="fa-solid fa-rotate-right"></i>
+          <p>Darmowe zwroty do 15 dni</p>
+        </div>
+        <div class="why-cart-content">
+          <i class="fa-solid fa-0"></i>
+          <p class="no-border">Odbiór osobisty za 0 zł</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo-container">
+        <a href="index.html" class="logo">LAP</a>
+      </div>
+
+      <div class="dark-mode">
+        <i class="fa-solid fa-sun active light"></i>
+        <i class="fa-solid fa-moon dark"></i>
+      </div>
+
+      <div class="input-container">
+        <div class="searchbar">
+          <input
+            type="search"
+            id="search"
+            data-search
+            placeholder="Czego szukasz?"
+          />
+        </div>
+
+        <!-- SEARCHBAR JS -->
+
+        <div class="item-info-container hide"></div>
+        <template data-item-info-card>
+          <div class="item-info-card">
+            <a href="#" class="text" data-text></a>
+          </div>
+        </template>
+
+        <div class="searchbar-right-content">
+          <div class="search-bar-line"></div>
+          <div class="where">
+            <p>Wszędzie</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <button class="btn search-bar-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+
+      <ul class="header-items">
+        <li>
+          <a href="" class="first-menu-item"
+            ><i class="fa-solid fa-headset fa-2x"></i>
+            <p>Pomoc i kontakt</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-user-large fa-2x"></i>
+            <p>Twoje konto</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-heart fa-2x"></i>
+            <p>Twoje listy</p>
+          </a>
+        </li>
+        <li>
+          <a href="/koszyk.html">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+            <p>Koszyk</p>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- HEADER MENU -->
+
+    <header class="header-menu">
+      <ul class="header-menu-items">
+        <a href="">
+          <i class="fa-solid fa-computer"></i>
+          <p>Laptopy i komputery</p>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-mobile"></i>
+          <p>Smartfony i smartwatche</p>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-gamepad"></i>
+          <p>Gaming i streaming</p>
+        </a>
+
+        <a href="">
+          <i class="fa-solid fa-microchip"></i>
+          <p>Podzespoły komputerowe</p>
+        </a>
+        <a href=""
+          ><i class="fa-solid fa-print"></i>
+          <p>Urządzenia peryferyjne</p>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-tv"></i>
+          <p>TV i audio</p>
+        </a>
+        <a href=""
+          ><i class="fa-solid fa-house-signal"></i>
+          <p>Smarthome i lifestyle</p>
+        </a>
+        <a href=""
+          ><i class="fa-solid fa-charging-station"></i>
+          <p>Akcesoria</p>
+        </a>
+        <a href="" class="pink">
+          <i class="fa-solid fa-percent"></i>
+          <p>Trendy, Promocje i nowości</p>
+        </a>
+      </ul>
+    </header>
+
+    <!-- ITEM HEADER -->
+
+    <section class="item-header">
+      <div class="item-specifics">
+        <p>y-lap</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p>Laptopy i komputery</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p>Laptopy/Notebooki/Ultrabooki</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p>Notebooki/Laptopy 15,6"</p>
+      </div>
+      <div class="item-specifics-right">
+        <i class="fa-solid fa-print"></i>
+        <p>Drukuj</p>
+        <i class="fa-solid fa-heart"></i>
+        <p>Zapisz na liście</p>
+        <i class="fa-solid fa-scale-balanced"></i>
+        <p>Porównaj</p>
+      </div>
+    </section>
+
+    <!-- ITEM-MAIN -->
+
+    <section class="item-main">
+      <div class="item-main-grid">
+        <div class="item-img"></div>
+        <div class="item-info-1">
+          Lenovo ThinkBook 15 i5-1135G7/16GB/512/Win11P ★ ★ ★ ★ ★ ✭ (12 opinii)
+          od: Lenovo|kod producenta: 20VE00RSPB|kod x-kom: 692906
+        </div>
+        <div class="item-info-2">
+          Procesor:Intel Core i5-1135G7 Pamięć:16 GB Grafika:Intel Iris Xe
+          Graphics Typ ekranu:Matowy, LED, IPS specyfikacja Lenovo ThinkBook 15
+          i5-1135G7/16GB/512/Win11P Przewiń do pełnej specyfikacji
+        </div>
+        <div class="item-price">
+          Oszczędź 200,00 zł 3 999,00 zł 3 799,00 zł 1 Dodaj do koszyka Dostępny
+          Dowiedz się więcej Kup teraz, otrzymasz we wtorek Dowiedz się więcej
+          Darmowa dostawa Sprawdź szczegóły Rata tylko 117,14 zł Oblicz ratę
+          Sprawdź dostępność w salonach Wybierz salon
+        </div>
+        <div class="item-small-imgs"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <section class="footer">
+      <p>&copy; y-lap 2021-2022</p>
+    </section>
+  </body>
+</html>
