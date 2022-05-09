@@ -21,7 +21,8 @@
     />
 
     <link rel="stylesheet" href="/dist/style.css" />
-    <script defer src="/app/js/script.js"></script>
+    <script defer src="/app/js/index.js"></script>
+    <script defer src="/app/js/koszyks.js"></script>
 
     <title>Y-lap.pl - Sklep komputerowy</title>
   </head>
@@ -164,6 +165,244 @@
         </a>
       </ul>
     </header>
+
+    <!-- KOSZYK PUSTY -->
+
+    <section class="koszyk-pusty-container">
+      <div class="koszyk-pusty">
+        <h2>Twój koszyk jest pusty</h2>
+        <h3>Szukasz inspiracji?</h3>
+        <a href="index.html">
+          <button class="koszyk-glowna">Przejdź do strony głównej</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- KOSZYK -->
+
+    <section class="koszyk">
+      <div class="koszyk-grid">
+        <div class="koszyk-pelny-left">
+          <div class="first-line">
+            <h2>Koszyk ()</h2>
+            <div class="clean">
+              <i class="fa-solid fa-trash-can"></i>
+              <p>Wyczyść koszyk</p>
+            </div>
+          </div>
+          <div class="koszyk-item">
+            <div class="koszyk-item-left">
+              <div class="koszyk-item-img"></div>
+              <div class="koszyk-item-text">
+                <p>
+                  Lenovo ThinkBook 15 i5-1135G7/16GB/512/Win11P</p>
+              </div>
+            </div>
+            <div class="koszyk-item-right">
+              <div class="koszyk-item-cena">
+                <p class="crossed-text">3 999,00 zł</p>
+                <p>3 799,00 zł</p>
+              </div>
+              <!-- TEN SAM LICZNIK -->
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="koszyk-pelny-right">
+          <div class="podsumowanie"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OSTATNIO OGLADANE -->
+
+    <section class="ostatnio-ogladane">
+        <div class="headline">
+          <h2>Ostatnio oglądane</h2>
+        </div>
+        <div class="ostatnio-ogladane-grid">
+          <div class="item-cart ic1">
+            <div class="cart-info">
+              <p class="cart-info-text">Polecamy</p>
+            </div>
+            <div class="cart-img ct1"></div>
+            <p>Huawei MateBook D 15 i3-10110U/8GB/256/Win10 srebrny</p>
+            <div class="crossed-text">2 399,00 zł</div>
+            <p>1 999,00 zł</p>
+          </div>
+          <div class="item-cart ic2">
+            <div class="cart-info">
+              <p class="cart-info-text">HIT</p>
+            </div>
+            <div class="cart-img ct2"></div>
+            <p>G4M3R HERO i5-11400F/16GB/1TB/RTX3060/W11x</p>
+            <div class="crossed-text">7 150,00 zł</div>
+            <p>6 600,00 zł</p>
+          </div>
+          <div class="item-cart ic3">
+            <div class="cart-info">
+              <p class="cart-info-text">HIT</p>
+            </div>
+            <div class="cart-img ct3"></div>
+            <p>XPG Summoner (RGB, CHERRY MX BLUE)</p>
+            <div class="crossed-text"></div>
+            <p>449,00 zł</p>
+          </div>
+          <div class="item-cart ic4">
+            <div class="cart-info">
+              <p class="cart-info-text">Bestseller</p>
+            </div>
+            <div class="cart-img ct4"></div>
+            <p>realme C11 2021 2+32GB Iron Grey
+            </p>
+            <div class="crossed-text"></div>
+            <p>469 zł</p>
+          </div>
+          <div class="item-cart ic7">
+            <div class="cart-info">
+              <p class="cart-info-text">Promocja</p>
+            </div>
+            
+            <div class="cart-img ct7"></div>
+            <p>Suunto 9 G1 Black</p>
+            <div class="crossed-text">1 249,00 zł</div>
+            <p>1 099,00 zł</p>
+          </div>
+          <div class="item-cart ic8">
+            <div class="cart-info">
+              <p class="cart-info-text">Polecamy</p>
+            </div>
+            
+            <div class="cart-img ct8"></div>
+            <p>JBL GO 3 Niebieski</p>
+            <div class="crossed-text"></div>
+            <p>159,00 zł</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+        <div class="newsletter-grid">
+          <div class="big-card newsletter-card">
+            <div class="left-area">
+              <h2>Newsletter</h2>
+              <p>Nie przegap żadnej promocji,<br>
+              zdobywaj dodatkowe rabaty</p>
+              <div class="input-container">
+                <div class="searchbar">
+                  <input type="search" id="search" placeholder="Twój email" />
+                </div>
+                <button class="btn newsletter-btn">
+                  Zapisz się
+                </button>
+              </div>
+             </div>
+            <div class="right-area">
+              <img src="/images/section-9/1.png" class="newsletter-img"></img>
+            </div>
+          </div>
+          <div class="big-card mobile-app-card">
+            <div class="left-area">
+              <h2>Aplikacja mobilna</h2>
+              <p>Sprawdzaj promocje, <br>
+              które dostępne są tylko w aplikacji</p>
+              <div class="download-btns">
+                <img src="/images/section-9/2.svg" alt="">
+                <img src="/images/section-9/3.svg" alt="">
+                <img src="/images/section-9/4.svg" alt="">
+              </div>
+            </div>
+            <div class="right-area">
+              
+            </div>
+          </div>
+        </div>
+    </section>
+  
+    <!-- SALES-MASTERS -->
+  
+    <section class="sales-masters">
+          <div class="big-card">
+            <div class="sales-logo"></div>
+            <div class="sales-center-text">
+             
+              <p><strong>Polecaj i zarabiaj.</strong>  Dołącz do naszego programu partnerskiego.</p>
+            </div>
+            <div class="btn sales-btn">Zacznij zarabiać</div>
+          </div>
+    </section>
+  
+    <!-- FOOTER INFO -->
+  
+    <section class="footer-info">
+        <div class="footer-info-grid">
+          <div class="footer-col zamowienia">
+            <h3>Zamówienia</h3>
+            <p>Dostawa</p>
+            <p>Raty</p>
+            <p>Leasing</p>
+            <p>Ubezpieczenia</p>
+            <p>TaxFree</p>
+            <p>Montaż</p>
+            <p>Zwroty i reklamacje</p>
+            <p>Najczęściej zadawane pytania</p>
+          </div>
+          <div class="footer-col promocje-i-inspiracje">
+            <h3>Promocje i inspiracje</h3>
+            <p>Wyprzedaż</p>
+            <p>Gorący strzał</p>
+            <p>Promocje</p>
+            <p>Karty podarunkowe</p>
+            <p>Poradniki</p>
+            <p>Aktualności</p>
+          </div>
+          <div class="footer-col y-lap">
+            <h3>y-lap</h3>
+            <p>O nas</p>
+            <p>Regulamin</p>
+            <p>Polityka prywatności</p>
+            <p>Polityka cookies</p>
+            <p>Biuro prasowe</p>
+            <p>Zamówienia</p>
+            <p>Współpraca</p>
+            <p>Geex</p>
+            <p>Forum</p>
+            <p>Kariera</p>
+            <p>Kontakt</p>
+            <p>Realizowane projekty</p>
+          </div>
+          <div class="footer-col kontakt">
+            <h3>Kontakt</h3>
+            <div class="phone-number">
+              <i class="fa-solid fa-phone"></i>
+              <div class="phone-details">
+                <h3>00 000 00 00</h3>
+                <div class="pn-pt">
+                  <p>pon.- pt.</p>
+                  <p>8:00 - 21:00</p>
+                </div>
+                <div class="sob-niedz">
+                  <p>pon.- pt.</p>
+                  <p>8:00 - 19:00</p>
+                </div>
+                
+              </div>
+            </div>
+            <p><i class="fa-solid fa-envelope"></i>y-lap@y-lap.pl</p>
+              <p><i class="fa-solid fa-location-dot"></i>Salony y-lap</p>
+              <p><i class="fa-solid fa-calendar-days"></i>Umów wizytę w salonie</p>
+          <div class="socials">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+    </section>
+  
 
     <!-- FOOTER -->
 

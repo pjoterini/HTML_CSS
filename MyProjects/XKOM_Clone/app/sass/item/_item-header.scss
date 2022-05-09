@@ -1,0 +1,32 @@
+@use '../util' as u;
+
+.item-header {
+    width: 60%;
+    margin-top: u.rem(30);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // @include u.breakpoint-down(large) {
+    //     width: 95%;
+    // }
+    .item-specifics {
+        display: flex;
+
+        i, p {
+            margin-right: u.rem(10);
+        }
+    }
+
+    .item-specifics-right {
+        display: flex;
+
+        i {
+            margin-left: u.rem(40);
+        }
+        p {
+            margin-left: u.rem(7);
+        }
+    }
+}
