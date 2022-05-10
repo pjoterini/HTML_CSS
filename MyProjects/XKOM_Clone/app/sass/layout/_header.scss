@@ -141,6 +141,8 @@
         display: flex;
 
         li {
+            position: relative;
+
             a.first-menu-item {
                 border-right: 1px solid var(--light-gray);
 
@@ -166,6 +168,24 @@
                     font-size: u.rem(13);
                     text-align: center;
                 }
+            }
+
+            .cart::after {
+                content: '1';
+                position: absolute;
+                right: u.rem(25);
+                top: u.rem(-3);
+                width: u.rem(17);
+                height: u.rem(17);
+                background-color: var(--blue);
+                color: var(--background-color);
+                border-radius: u.rem(25);
+                font-size: u.rem(12);
+                font-weight: 700;
+                text-align: center;
+                
+                
+                
             }
         }
     }

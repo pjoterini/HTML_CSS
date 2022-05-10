@@ -151,10 +151,11 @@
                         justify-content: center;
                         align-items: center;
                         padding: u.rem(10) u.rem(15);
-                        background-color: rgb(43, 163, 43);
+                        background-color: var(--green);
                         border-radius: u.rem(25);
-                        border: 1px solid rgb(48, 161, 48) ;
+                        border: 1px solid var(--green);
                         color: var(--background-color);
+                        cursor: pointer;
 
                         i {
                             padding-right: u.rem(10);

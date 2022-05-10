@@ -9,55 +9,169 @@
     .koszyk-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        gap: u.rem(40);
 
-        .first-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .koszyk-pelny-left {
 
-            h2 {
-                margin: u.rem(20) 0;
-            }
-
-            .clean {
+            .first-line {
                 display: flex;
-
-                p {
-                    margin-left: u.rem(10);
+                justify-content: space-between;
+                align-items: center;
+    
+                h2 {
+                    margin: u.rem(20) 0;
+                }
+    
+                .clean {
+                    display: flex;
+    
+                    p {
+                        margin-left: u.rem(10);
+                    }
+                }
+            }
+    
+            .koszyk-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: u.rem(0) u.rem(20);
+                border: 1px solid var(--light-gray);
+                border-radius: u.rem(12);
+    
+                .koszyk-item-left {
+                    display: flex;
+                    align-items: center;
+    
+                    .koszyk-item-img {
+                        background-image: url(/images/item-site/1.webp);
+                        background-position: center;
+                        background-size: contain;
+                        height: 100px;
+                        width: 100px;
+                        margin-right: u.rem(20);
+                    }
+                }
+    
+                .koszyk-item-right {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    i {
+                        margin-left: u.rem(20);
+                    }
                 }
             }
         }
 
-        .koszyk-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: u.rem(0) u.rem(20);
+        .koszyk-pelny-right {
+            margin-top: u.rem(20);
             border: 1px solid var(--light-gray);
             border-radius: u.rem(12);
 
-            .koszyk-item-left {
+            .podsumowanie {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
 
-                .koszyk-item-img {
-                    background-image: url(/images/item-site/1.webp);
-                    background-position: center;
-                    background-size: contain;
-                    height: 100px;
-                    width: 100px;
-                    margin-right: u.rem(20);
+                .kod-promocyjny {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: u.rem(15);
                 }
             }
 
-            .koszyk-item-right {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            .podsumowanie-down {
+                padding: u.rem(15);
+                border-radius: u.rem(15);
+                border-top: 1px solid var(--light-gray);
+                background-color: var(--header-color);
 
-                i {
-                    margin-left: u.rem(20);
+                .oszczedzasz, .kwota {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: u.rem(15);
                 }
+
+                .oszczedzasz {
+                    p {
+                        color: var(--green);
+                        font-size: u.rem(15);
+                    }
+                }
+                .kwota {
+                    p {
+                        font-weight: 700;
+                        font-size: u.rem(15);
+                    }
+                }
+
+                .dostawa-btn {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: u.rem(10);
+                    margin-bottom: u.rem(15);
+                    background-color: var(--green);
+                    color: var(--background-color);
+                    border: none;
+                    border-radius: u.rem(25);
+                    cursor: pointer;
+
+                    i {
+                        margin-left: u.rem(10);
+                    }
+
+                    p {
+                        font-size: u.rem(15);
+                    }
+                }
+                .dostawa-btn:hover {
+                    filter: brightness(.9);
+                }
+
+                .rata {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: u.rem(10);
+                    color: var(--gray);
+                    border: 1px solid var(--gray);
+                    border-radius: u.rem(25);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .end-info {
+            grid-column: 2 / 3;
+            
+            display: flex;
+            align-items: center;
+            padding: u.rem(10);
+            color: var(--gray);
+
+            i {
+                margin-right: u.rem(10);
+            }
+        }
+
+        .back-btn {
+            background-color: var(--header-color);
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            border: none;
+            border-radius: u.rem(15);
+            padding: u.rem(10) u.rem(20);
+            cursor: pointer;
+            
+            i {
+                margin-right: u.rem(10);
             }
         }
     }
