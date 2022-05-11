@@ -29,6 +29,9 @@
                         margin-left: u.rem(10);
                     }
                 }
+                .remove-from-cart-btn {
+                    cursor: pointer;
+                }
             }
     
             .koszyk-item {
@@ -57,9 +60,18 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-    
+                    
+                    .item-quantity-cart {
+                        margin-left: u.rem(20);
+                        width: u.rem(50);
+                    }
+
                     i {
                         margin-left: u.rem(20);
+                    }
+
+                    .remove-from-cart-btn {
+                        cursor: pointer;
                     }
                 }
             }

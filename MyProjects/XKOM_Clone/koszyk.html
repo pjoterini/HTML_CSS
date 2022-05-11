@@ -21,8 +21,7 @@
     />
 
     <link rel="stylesheet" href="/dist/style.css" />
-    <script defer src="/app/js/index.js"></script>
-    <script defer src="/app/js/koszyks.js"></script>
+    <script defer src="/app/js/koszyk.js"></script>
 
     <title>Y-lap.pl - Sklep komputerowy</title>
   </head>
@@ -185,7 +184,7 @@
         <div class="koszyk-pelny-left">
           <div class="first-line">
             <h2>Koszyk ()</h2>
-            <div class="clean">
+            <div class="clean remove-from-cart-btn">
               <i class="fa-solid fa-trash-can"></i>
               <p>Wyczyść koszyk</p>
             </div>
@@ -203,10 +202,11 @@
                 <p class="crossed-text">3 999,00 zł</p>
                 <p>3 799,00 zł</p>
               </div>
-              <div class="item-quantity-cart"></div>
-              <!-- TEN SAM LICZNIK -->
+
+              <input class="item-quantity-cart" type="number" value="0" min="1" max="10">
+        
               <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-trash-can"></i>
+              <i class="fa-solid fa-trash-can remove-from-cart-btn"></i>
             </div>
           </div>
         </div>

@@ -171,7 +171,7 @@
             }
 
             .cart::after {
-                content: '1';
+                content: var(--content, '');
                 position: absolute;
                 right: u.rem(25);
                 top: u.rem(-3);
@@ -183,9 +183,7 @@
                 font-size: u.rem(12);
                 font-weight: 700;
                 text-align: center;
-                
-                
-                
+                visibility: var(--visible, hidden);
             }
         }
     }
