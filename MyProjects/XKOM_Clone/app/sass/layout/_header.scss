@@ -175,11 +175,12 @@
                 position: absolute;
                 right: u.rem(25);
                 top: u.rem(-3);
-                width: u.rem(17);
-                height: u.rem(17);
+                width: u.rem(20);
+                height: u.rem(20);
                 background-color: var(--blue);
                 color: var(--background-color);
                 border-radius: u.rem(25);
+                border: 2px solid var(--background-color);
                 font-size: u.rem(12);
                 font-weight: 700;
                 text-align: center;

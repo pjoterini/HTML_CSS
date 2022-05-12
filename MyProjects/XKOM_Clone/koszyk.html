@@ -183,7 +183,7 @@
       <div class="koszyk-grid">
         <div class="koszyk-pelny-left">
           <div class="first-line">
-            <h2>Koszyk ()</h2>
+            <h2 class="first-line-amount"></h2>
             <div class="clean remove-from-cart-btn">
               <i class="fa-solid fa-trash-can"></i>
               <p>Wyczyść koszyk</p>
@@ -203,7 +203,7 @@
                 <p>3 799,00 zł</p>
               </div>
 
-              <input class="item-quantity-cart" type="number" value="0" min="1" max="10">
+              <input class="item-quantity-cart" type="number" value="0" min="1" max="10" onblur="inputExit()">
         
               <i class="fa-solid fa-heart"></i>
               <i class="fa-solid fa-trash-can remove-from-cart-btn"></i>
@@ -220,11 +220,11 @@
           <div class="podsumowanie-down">
             <div class="oszczedzasz">
               <p>Oszczędzasz</p>
-              <p>200 zł</p>
+              <p class="you-save"></p>
             </div>
             <div class="kwota">
               <p>Łączna kwota</p>
-              <p>3 799,00zł</p>
+              <p class="full-price"></p>
             </div>
             <a href="dostawa.html">
               <button class="dostawa-btn">

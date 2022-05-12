@@ -133,6 +133,7 @@
                 border-bottom: 1px solid var(--light-gray);
 
                 .cart-section {
+                    position: relative;
                     width: 80%;
                     display: flex;
                     justify-content: space-between;
@@ -140,7 +141,6 @@
                     margin: u.rem(20) 0;
 
                     .cart-amount-container {
-                        width: 15%;
                         padding: u.rem(10) u.rem(15);
                         border-radius: u.rem(25);
                         border: 1px solid var(--light-gray);
@@ -160,6 +160,25 @@
                         i {
                             padding-right: u.rem(10);
                         }
+                    }
+                    .cart-btn:hover {
+                        filter: brightness(1.1);
+                    }
+
+                    .modal {
+                        position: absolute;
+                        top: u.rem(45);
+                        left: u.rem(15);
+                        padding: u.rem(10);
+                        border: 1px solid var(--green);
+                        border-radius: u.rem(12);
+                        background-color: var(--background-color);
+                        transition: all .5s ease-in-out;
+                        opacity: 0;
+                    }
+
+                    .opacity {
+                        opacity: 1;
                     }
                 }
             }

@@ -1,4 +1,20 @@
-localStorage.setItem('cartQuantity', 0)
+// INITIALIZE LOCAL STORAGE
+
+if (localStorage['cartQuantity'] === null) {
+    localStorage.setItem('cartQuantity', '0')
+}
+
+// CART QUANTITY, ACCESING :AFTER ELEMENT
+
+const cartImgCounter = document.querySelector('.cart')
+
+let cartImgCounterAfter = window.getComputedStyle(cartImgCounter, '::after');
+
+cartImgCounter.style.setProperty('--content',`'${localStorage['cartQuantity']}'`);
+
+if (localStorage['cartQuantity'] > 0) {
+    cartImgCounter.style.setProperty('--visible', 'visible');
+};
 
 // DARK MODE
 
@@ -219,3 +235,4 @@ const countdown = () => {
 }
 
 setInterval(countdown, 1000)
+

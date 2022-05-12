@@ -1,0 +1,28 @@
+@use '../util' as u;
+
+.dostawa-main {
+    width: 60%;
+        margin-inline: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    @include u.breakpoint-down(large) {
+        width: 95%;
+    }
+
+    .dostawa-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: u.rem(20);
+
+        // .dostawa-i-platnosc {
+
+        // }
+
+        .dostawa-podsumowanie {
+            border: 1px solid var(--light-gray);
+        }
+    }
+}
