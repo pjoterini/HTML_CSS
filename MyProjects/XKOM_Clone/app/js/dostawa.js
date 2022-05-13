@@ -18,3 +18,19 @@ lightModeBtn.addEventListener('click', () => {
   lightModeBtn.classList.add('active')
   document.head.removeChild(link)
 })
+
+// RADIO BATONY 
+
+const radioBtns = document.querySelectorAll('.radio-btn-input')
+const checkBoxes = document.querySelectorAll('.check-box')
+
+radioBtns.forEach(radioBtn => {
+  radioBtn.addEventListener('click', (e) => {
+    checkBoxes.forEach(checkBox => {
+      if (checkBox.classList.contains('check-box-clicked')) {
+        checkBox.classList.remove('check-box-clicked')
+        e.target.parentElement.parentElement.parentElement.classList.add('check-box-clicked')
+      }
+    })
+  })
+})

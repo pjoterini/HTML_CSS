@@ -1,7 +1,8 @@
 @use '../util' as u;
 
 .header-dostawa {
-    width: 60%;
+    padding-top: u.rem(10);
+        width: 60%;
         margin-inline: auto;
         margin-top: 0;
         display: flex;
