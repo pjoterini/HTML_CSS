@@ -1,0 +1,38 @@
+@use '../util' as u;
+
+.dostawa-footer {
+    width: 60%;
+    margin-inline: auto;
+    border-top: 1px solid var(--light-gray);
+    padding: u.rem(20) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        
+    @include u.breakpoint-down(large) {
+        width: 95%;
+    }
+
+    .left {
+        p {
+            color: var(--gray);
+        }
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: u.rem(10);
+            color: var(--gray);
+        }
+    }
+    
+    .right {
+        display: flex;
+    }
+    .right p:first-child {
+        margin-right: u.rem(10);
+    }
+}
