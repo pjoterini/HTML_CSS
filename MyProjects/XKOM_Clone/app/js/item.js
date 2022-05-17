@@ -53,6 +53,17 @@ lightModeBtn.addEventListener('click', () => {
   document.head.removeChild(link)
 })
 
+// BURGER MENU
+
+const hamburgerMenuBtn = document.querySelector('.hamburger-menu')
+const headerMenuItems = document.querySelector('.header-menu-items')
+
+hamburgerMenuBtn.addEventListener('click', () => {
+    hamburgerMenuBtn.classList.toggle('hamburger-active')
+    headerMenuItems.classList.toggle('small-device')
+})
+
+
 // WHY CART
 
 let openWhyBtn = document.querySelector('.open-why-btn')

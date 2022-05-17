@@ -8,10 +8,13 @@ const fullPrice = document.querySelector('.full-price')
 const youSave = document.querySelector('.you-save')
 const firstLineAmount = document.querySelector('.first-line-amount')
 
+// Dostawanie się do pseudo elementu :after
 
 let cartImgCounterAfter = window.getComputedStyle(cartImgCounter, '::after');
 
 cartImgCounter.style.setProperty('--content',`'${localStorage['cartQuantity']}'`);
+
+// Wartość inputu i DOM elementów 
 
 itemQuantityCart.value = localStorage['cartQuantity']
 
@@ -86,6 +89,16 @@ lightModeBtn.addEventListener('click', () => {
   darkModeBtn.classList.remove('active')
   lightModeBtn.classList.add('active')
   document.head.removeChild(link)
+})
+
+// BURGER MENU
+
+const hamburgerMenuBtn = document.querySelector('.hamburger-menu')
+const headerMenuItems = document.querySelector('.header-menu-items')
+
+hamburgerMenuBtn.addEventListener('click', () => {
+    hamburgerMenuBtn.classList.toggle('hamburger-active')
+    headerMenuItems.classList.toggle('small-device')
 })
 
 // WHY CART

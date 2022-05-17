@@ -53,6 +53,8 @@
 
     <!-- HEADER -->
     <header class="header">
+
+      
       <div class="logo-container">
         <a href="index.html" class="logo">LAP</a>
       </div>
@@ -60,6 +62,12 @@
       <div class="dark-mode">
         <i class="fa-solid fa-sun active light"></i>
         <i class="fa-solid fa-moon dark"></i>
+      </div>
+
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
 
       <div class="input-container">
@@ -70,13 +78,13 @@
         <!-- SEARCHBAR JS -->
 
         <div class="item-info-container hide"></div>
-        <template data-item-info-card>
-          <div class="item-info-card">
-            <a href="/item.html" class="text" data-text></a>
-          </div> 
-        </template>
+          <template data-item-info-card>
+            <div class="item-info-card">
+              <a href="/item.html" class="text" data-text></a>
+            </div> 
+          </template>
 
-        <div class="searchbar-right-content">
+          <div class="searchbar-right-content">
           <div class="search-bar-line"></div>
           <div class="where">
             <p>Wszędzie</p>
@@ -96,13 +104,13 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="display-none-small">
             <i class="fa-solid fa-user-large fa-2x"></i>
             <p>Twoje konto</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="display-none-small">
             <i class="fa-solid fa-heart fa-2x"></i>
             <p>Twoje listy</p>
           </a>

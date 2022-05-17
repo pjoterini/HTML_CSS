@@ -12,8 +12,33 @@
     @include u.breakpoint-down(large) {
         width: 95%;
     }
+    @include u.breakpoint-down(small) {
+        flex-direction: column;
+    }
+
+    .small-visible {
+        display: none;
+        margin-bottom: u.rem(20);
+
+        @include u.breakpoint-down(small) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }        
+    }
+   
+    .small-none {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include u.breakpoint-down(small) {
+            display: none;
+        }        
+    }
 
     .dark-mode {
+        margin-left: u.rem(20);
         
         i {
             transform: scale(.8);
@@ -52,11 +77,19 @@
         justify-content: space-between;
         align-items: center;
 
+        @include u.breakpoint-down(small) {
+            margin-bottom: u.rem(30);
+        } 
+
         .line {
             width: u.rem(100);
             height: u.rem(1);
             margin: 0 u.rem(20);
             background-color: var(--gray);
+
+            @include u.breakpoint-down(small) {
+            width: u.rem(70);
+            } 
         }
 
         .etap-part {

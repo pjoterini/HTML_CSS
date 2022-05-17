@@ -1,6 +1,10 @@
 @use '../util' as u;
 
 .why-btn {
+
+    @include u.breakpoint-down(medium) {
+        display: none;
+    }
  
     @include u.breakpoint-down(large) {
         display: none;

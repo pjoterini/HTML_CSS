@@ -30,6 +30,13 @@
         justify-items: center;
         align-items: center;
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include u.breakpoint-down(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         .marka {
             display: flex;
             justify-content: center;

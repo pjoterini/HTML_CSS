@@ -13,6 +13,13 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include u.breakpoint-down(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         h3, p {
             margin-bottom: u.rem(20);
         }

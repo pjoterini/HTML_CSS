@@ -9,6 +9,10 @@
     @include u.breakpoint-down(large) {
         width: 95%;
     }
+    @include u.breakpoint-down(small) {
+        display: none;
+    }
+    
 
     .btn-container {
         position: relative;
@@ -118,6 +122,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include u.breakpoint-down(medium) {
+            display: none;
+        }
 
         p {
             font-size: u.rem(13);

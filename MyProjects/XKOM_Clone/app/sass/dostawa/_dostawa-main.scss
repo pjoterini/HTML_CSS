@@ -2,12 +2,14 @@
 
 .dostawa-main {
     width: 60%;
-        margin-inline: auto;
-        margin-top: 0;
+    margin-inline: auto;
+    margin-top: 0;
         
-
     @include u.breakpoint-down(large) {
         width: 95%;
+    }
+    @include u.breakpoint-down(small) {
+        margin-bottom: u.rem(20);
     }
 
     .dostawa-grid {
@@ -18,8 +20,21 @@
         gap: 5%;
         border-top: 1px solid var(--light-gray);
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: 3fr 1fr;
+        }
+
+        @include u.breakpoint-down(small) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
         .dostawa-i-platnosc {
             margin-right: u.rem(40);
+
+            @include u.breakpoint-down(small) {
+                margin-right: u.rem(0);
+            }
             
             h2 {
                 margin-top: u.rem(30);

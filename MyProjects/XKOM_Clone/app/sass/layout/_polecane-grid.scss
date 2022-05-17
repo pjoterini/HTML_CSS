@@ -15,9 +15,27 @@
         grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
         grid-template-rows: .5fr 3fr 3fr;
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-rows: .5fr 3fr 1.5fr 1.5fr;
+        }
+        @include u.breakpoint-down(small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: .2fr 2.5fr repeat(6, 1fr);
+        }
+
         .headline {
             grid-column: 2 / 6;
             grid-row: 1 / 2;
+
+            @include u.breakpoint-down(medium) {
+                grid-column: 2 / 4;
+                grid-row: 1 / 2;
+            }
+            @include u.breakpoint-down(small) {
+                grid-column: 1;
+                grid-row: 1 / 2;
+            }
         }
 
         .item-cart {

@@ -29,6 +29,14 @@
         grid-template-columns: repeat(4, 1fr);
         gap: u.rem(15);
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include u.breakpoint-down(small) {
+            grid-template-columns: 1fr;
+        }
+        
+
         .ad-cart-container {
             display: flex;
             flex-direction: column;

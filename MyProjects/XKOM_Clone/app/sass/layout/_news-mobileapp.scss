@@ -14,6 +14,10 @@
         grid-template-columns: 1fr 1fr;
         gap: u.rem(20);
 
+        @include u.breakpoint-down(medium) {
+            grid-template-columns: 1fr;
+        }
+
         .big-card {
             padding: u.rem(35) u.rem(45);
             display: flex;
@@ -82,7 +86,10 @@
                 align-items: center;
                 .newsletter-img {
                     height: 120px;
-                        
+
+                    @include u.breakpoint-down(small) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -97,10 +104,18 @@
             .left-area {
                 .download-btns {
                     display: flex;
+
+                    @include u.breakpoint-down(small) {
+                        flex-direction: column;
+                    }
                     
                     img {
                         width: u.rem(120);
                         margin-right: u.rem(8);
+                        
+                        @include u.breakpoint-down(small) {
+                            margin-top: u.rem(5);
+                        }
                     }
                 }
             }
@@ -111,6 +126,10 @@
                 width: 100%;
                 background-position: center;
                 background-size: cover;
+
+                @include u.breakpoint-down(small) {
+                    display: none;
+                }
             }
         }
     }
