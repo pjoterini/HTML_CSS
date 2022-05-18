@@ -1,39 +1,38 @@
 @use '../util' as u;
 
 .slider {
-    margin-top: u.rem(20);
-    width: 80%;
-    margin-inline: auto;
+    margin-top: u.rem(90);
     position: relative;
     
-    @include u.breakpoint-down(large) {
-        width: 95%;
+    @include u.breakpoint-down(medium) {
+       margin-top: u.rem(0);
     }
     @include u.breakpoint-down(small) {
         display: none;
     }
     
-
     .btn-container {
         position: relative;
 
-        .btn{
+        .slider-btn{
             top: 50%;
             position: absolute;
             height: 40px;
             width: 40px;
+            padding: u.rem(10);
             border-radius: 50%;
             box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
             z-index: 2;
-            background-color: var(--background-color);
+            background-color: var(--background);
             
             i {
-                color: var(--gray);
+                color: var(--gray4);
             }
         }
 
         .btn:hover {
-            background-color: var(--light-gray);
+            background-color: var(--gray1);
+            outline: none;
         }
     
         .slider-btn-left {
@@ -49,10 +48,8 @@
         position: relative;
         height: u.rem(344);
         width: 100%;
-
         border-radius: u.rem(25);
         overflow: hidden;
-        background-color: aliceblue;
         box-shadow: rgba(0, 0, 0, 0.64) 0px 2px 8px -5px;
 
         .slides {
@@ -61,16 +58,14 @@
             left: 0;
             height: 100%;
             width: 100%;
-            transition: transform 0.5s ease-in-out;
-
+            transition: var(--fast);
 
             .slide {
-                height: 100%;
-                width: 100%;
-                
                 position: absolute;
                 top: 0;
                 left: 0;
+                height: 100%;
+                width: 100%;
             }
     
             .s1 {

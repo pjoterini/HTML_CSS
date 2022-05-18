@@ -2,16 +2,10 @@
 
 .header-dostawa {
     padding-top: u.rem(10);
-        width: 60%;
-        margin-inline: auto;
-        margin-top: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    @include u.breakpoint-down(large) {
-        width: 95%;
-    }
     @include u.breakpoint-down(small) {
         flex-direction: column;
     }
@@ -44,7 +38,7 @@
             transform: scale(.8);
             padding: u.rem(10);
             border-radius: 50%;
-            color: var(--gray);
+            color: var(--gray3);
             cursor: pointer;
         }
 
@@ -58,7 +52,7 @@
         .logo {
             font-size: u.rem(40);
             font-weight: 900;
-            color: var(--text-color);
+            color: var(--text);
             position: relative;
         }
 
@@ -83,9 +77,9 @@
 
         .line {
             width: u.rem(100);
-            height: u.rem(1);
+            height: u.rem(.5);
             margin: 0 u.rem(20);
-            background-color: var(--gray);
+            background-color: var(--gray1);
 
             @include u.breakpoint-down(small) {
             width: u.rem(70);
@@ -100,7 +94,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            border: 1px solid var(--gray);
+            border: 1px solid var(--gray1);
 
             p {
                 position: absolute;
@@ -110,7 +104,7 @@
             }
 
             h3 {
-                color: var(--gray);
+                color: var(--gray3);
             }
 
             .etap-text {
@@ -119,11 +113,11 @@
         }
 
         .gray-part {
-            border: var(--light-gray) 1px solid;
-            background-color: var(--light-gray);
+            border: var(--gray1) 1px solid;
+            background-color: var(--gray1);
 
             i {
-                color: var(--background-color);
+                color: var(--background);
             }
 
             p {
@@ -132,15 +126,15 @@
         }
         
         .black-part {
-            border: var(--gray) 1px solid;
-            background-color: var(--text-color);
+            border: var(--gray3) 1px solid;
+            background-color: var(--text);
 
             h3 {
-                color: var(--background-color);
+                color: var(--text-white);
             }
 
             p {
-                color: var(--text-color);
+                color: var(--text);
             }
         }
     }

@@ -1,24 +1,24 @@
 @use '../util' as u;
 
-
 .header-menu {
-    width: 100%;
-    background-color: var(--header-color);
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header);
     box-shadow: rgba(0, 0, 0, 0.64) 0px 2px 8px -5px;
 
     .header-menu-items {
         width: 80%;
-        margin-inline: auto;
-        margin-top: 0;
+        margin: 0;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-  
-        @include u.breakpoint-down(large) {
-            width: 95%;
-        }
+
         @include u.breakpoint-down(medium) {
             display: none;
-            opacity: 0;
         }
         
         a {
@@ -29,7 +29,7 @@
             color: var(--text-color);
             
             i {
-                color: var(--gray);
+                color: var(--gray4);
                 
                 @include u.breakpoint-down(large) {
                     display: none;

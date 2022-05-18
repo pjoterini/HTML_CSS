@@ -2,13 +2,7 @@
 
 .footer-info {
     margin-top: u.rem(70);
-    width: 80%;
-    margin-inline: auto;
-
-    @include u.breakpoint-down(large) {
-        width: 95%;
-    }
-
+    
     .footer-info-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

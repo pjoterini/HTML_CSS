@@ -12,7 +12,7 @@
             position: absolute;
             left: u.rem(15);
             top: u.rem(10);
-            color: var(--gray);
+            color: var(--gray2);
             pointer-events: none;
         }
 
@@ -25,12 +25,12 @@
             margin-bottom: u.rem(20);
             padding: u.rem(12) u.rem(15);
             border-radius: u.rem(25);
-            border: 1px solid var(--light-gray);
+            border: 1px solid var(--gray1);
 
             overflow: visible;
         }
         input:focus {
-            border: 1px solid var(--gray);
+            border: 1px solid var(--gray2);
             outline: none;
         }
 
@@ -44,8 +44,8 @@
             top: u.rem(-7);
             padding: 0 u.rem(5);
             font-size: u.rem(12);
-            background-color: var(--background-color);
-            color: var(--gray);
+            background-color: var(--background);
+            color: var(--gray3);
 
             transition: all .3s ease-in-out;
         }
@@ -67,13 +67,13 @@
         align-items: center;
 
         i {
-            color: var(--gray);
+            color: var(--gray4);
             margin-right: u.rem(10);
         }
 
         h5 {
             font-weight: 500;
-            color: var(--gray);
+            color: var(--text);
             margin: u.rem(5) 0;
         }
     }
@@ -96,7 +96,7 @@
         h5 {
             margin-top: u.rem(10);
             font-weight: 500;
-            color: var(--gray);
+            color: var(--gray3);
             margin-bottom: 0;
         }
 
@@ -126,7 +126,7 @@
                 width: 20px;
                 background-color: none;
                 border-radius: u.rem(4);
-                border: 1px solid var(--light-gray);
+                border: 1px solid var(--gray1);
             }
             .checkmark:after {
                 content: "";
@@ -136,11 +136,11 @@
             
             .checkbox-btn-container:hover input ~ .checkmark {
             background-color: rgb(230, 230, 230);
-            border: 2px solid var(--gray);
+            border: 2px solid var(--gray3);
             }
             input:checked ~ .checkmark {
             background-color: none;
-            border: 1px solid var(--gray);
+            border: 1px solid var(--gray3);
             }
             input:checked ~ .checkmark:after {
             display: block;
@@ -171,8 +171,6 @@
             }
         }
     }
-
-    
 }
 
 .wymagane {

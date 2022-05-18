@@ -2,12 +2,6 @@
 
 .promocje {
     margin-top: u.rem(40);
-    width: 80%;
-    margin-inline: auto;
-
-    @include u.breakpoint-down(large) {
-        width: 95%;
-    }
 
     .headline {
         margin-bottom: u.rem(30);
@@ -36,60 +30,19 @@
             grid-template-columns: 1fr;
         }
 
-        .ad-cart-container {
-            display: flex;
-            flex-direction: column;
-
-            .ad-cart-padding {
-                padding: u.rem(20) 0;
-                
-                -webkit-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                -moz-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                border-radius: u.rem(12);
-                
-                .ad-cart {
-                    height: u.rem(250);
-                    padding: u.rem(100);
-                    background-position: center;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
-    
-                .ac1 {
-                    background-image: url(/images/section-2/1.webp);
-                }
-                .ac2 {
-                    background-image: url(/images/section-2/2.webp);
-                }
-            }    
-
-            .ad-cart-padding-zero {
-                -webkit-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                -moz-box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                box-shadow: 0px 0px 4px -2px rgba(66, 68, 90, 1);
-                border-radius: u.rem(12);
-                overflow: hidden;
-
-                .ad-cart {
-                    height: u.rem(290);
-                    padding: u.rem(100);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-
-                .ac3 {
-                    background-image: url(/images/section-2/3.webp);
-                }
-                .ac4 {
-                    background-image: url(/images/section-2/4.webp);
-                }
-            }
-
-            h3 {
-                margin: u.rem(15) 0;
-            }
+        .ac1 {
+            background-image: url(/images/section-2/1.webp);
+        }
+        .ac2 {
+            background-image: url(/images/section-2/2.webp);
+        }
+      
+        .ac3 {
+            background-image: url(/images/section-2/3.webp);
+        }
+        .ac4 {
+            background-image: url(/images/section-2/4.webp);
         }
     }
 }
+ 

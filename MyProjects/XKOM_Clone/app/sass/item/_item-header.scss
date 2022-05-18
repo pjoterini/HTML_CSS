@@ -1,22 +1,22 @@
 @use '../util' as u;
 
 .item-header {
-    width: 60%;
-    margin-top: u.rem(30);
-    margin-inline: auto;
+    width: 100%;
+    margin-top: u.rem(90);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include u.breakpoint-down(large) {
-        width: 95%;
+    @include u.breakpoint-down(medium) {
+        margin-top: u.rem(20);    
     }
+    @include u.breakpoint-down(small) {
+        margin-top: u.rem(10);    
+    }
+
     .item-specifics {
         display: flex;
 
-        @include u.breakpoint-down(large) {
-            width: 95%;
-        }
         @include u.breakpoint-down(small) {
             flex-wrap: wrap;
         }

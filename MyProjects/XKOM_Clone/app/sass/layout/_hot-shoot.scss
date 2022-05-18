@@ -16,7 +16,7 @@
     @include u.breakpoint-down(medium) {
         grid-row: 1 / 3;
     }
-    @include u.breakpoint-down(medium) {
+    @include u.breakpoint-down(small) {
         grid-row: 2 / 3;
     }
 
@@ -31,28 +31,26 @@
         }
 
         .save-box {
-            background-color: var(--gray);
-            color: var(--text-color-white);
+            background-color: var(--gray3);
+            color: var(--text-white);
             border-radius: u.rem(10);
             padding: u.rem(10);
 
             h3 {
-                color: var(--text-color-white); 
                 padding-top: u.rem(5);
+                color: var(--text-white);
             }
         }
     }
 
     .hs-img {
         width: 100%;
-        height: 150px;
+        height: u.rem(150);
         object-fit: contain;
         background-image: url(/images/section-1/1.webp);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-
-
     }
 
     .pink-text {
@@ -73,7 +71,6 @@
             
             strong {
                 padding-left: u.rem(5);
-                color: var(--gray);
                 font-size: u.rem(26);
             }
         }
@@ -83,7 +80,6 @@
             
             strong {
                 padding-left: u.rem(5);
-                color: var(--gray);
                 font-size: u.rem(26);
             }
         }
@@ -97,7 +93,7 @@
         margin-top: u.rem(10);
 
         .timer-box {
-            background-color: var(--light-gray);
+            background-color: var(--gray1);
             padding: u.rem(10);
             font-size: u.rem(30);
             border-radius: u.rem(12);
@@ -116,7 +112,7 @@
         width: 80%;
         height: u.rem(10);
         border-radius: u.rem(15);
-        border: 1px solid var(--light-gray);
+        border: 1px solid var(--gray1);
         overflow: hidden;
         
         .progress {

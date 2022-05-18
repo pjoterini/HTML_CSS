@@ -2,12 +2,6 @@
 
 .strefa-marek {
     margin-top: u.rem(40);
-    width: 80%;
-    margin-inline: auto;
-
-    @include u.breakpoint-down(large) {
-        width: 95%;
-    }
 
     .headline {
         margin-bottom: u.rem(30);
