@@ -1,6 +1,7 @@
 // INITIALIZE LOCAL STORAGE
 
-if (localStorage['cartQuantity'] === null) {
+// cart value
+if (localStorage['cartQuantity'] == null) {
     localStorage.setItem('cartQuantity', '0')
 }
 
@@ -16,26 +17,7 @@ if (localStorage['cartQuantity'] > 0) {
     cartImgCounter.style.setProperty('--visible', 'visible');
 };
 
-// DARK MODE
 
-const lightModeBtn = document.querySelector('.light')
-const darkModeBtn = document.querySelector('.dark')
-
-let link = document.createElement('link')
-link.rel = 'stylesheet'
-link.href = '/dist/dark-mode.css'
-
-darkModeBtn.addEventListener('click', () => {
-  darkModeBtn.classList.add('active')
-  lightModeBtn.classList.remove('active')
-  document.head.appendChild(link)
-})
-
-lightModeBtn.addEventListener('click', () => {
-  darkModeBtn.classList.remove('active')
-  lightModeBtn.classList.add('active')
-  document.head.removeChild(link)
-})
 
 // SEARCHBAR 
 

@@ -16,16 +16,16 @@
 
     .open-why-btn {
         position: absolute;
-        padding: u.rem(20);
+        padding: u.rem(30);
         right: u.rem(-55);
         top: 30vh;
         transform: rotate(-90deg);
-        background-color: rgb(243, 243, 243);
+        background-color: var(--background-color);
         box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 10px -5px;
         border-radius: u.rem(14);
         border: none;
         font-size: u.rem(14);
-        color: var(--gray);
+        color: var(--gray4);
         font-weight: 500;
         cursor: pointer;
     }
@@ -37,7 +37,7 @@
         width: u.rem(150);
         display: flex;
         flex-direction: column;
-        background-color: var(--background-color);
+        background-color: var(--background);
         border-radius: u.rem(20);
         box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 10px -5px;
         z-index: 3;
@@ -50,13 +50,13 @@
 
             i {
                 transform: scale(1.5);
-                color: var(--gray);
+                color: var(--gray4);
             }
 
             p {
                 font-size: u.rem(14);
                 padding: u.rem(10) 0;
-                border-bottom: 1px solid var(--light-gray);
+                border-bottom: 1px solid var(--gray1);
             }
             .no-border {
                 border: none;
@@ -64,12 +64,12 @@
         }
         
         .gray {
-            background-color: var(--header-color);
+            background-color: var(--header);
             
             p {
                 border: none;
             }
-            border-bottom: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--gray1);
         }
     }
 }   

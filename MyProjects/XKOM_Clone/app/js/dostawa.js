@@ -13,27 +13,6 @@ afterPrice.forEach((price) => {
 sztuka.innerText = `(${localStorage['cartQuantity']}) szt.`
 save.innerText = `${200 * localStorage['cartQuantity']} zł`
 
-// DARK MODE
-
-const lightModeBtn = document.querySelector('.light')
-const darkModeBtn = document.querySelector('.dark')
-
-let link = document.createElement('link')
-link.rel = 'stylesheet'
-link.href = '/dist/dark-mode.css'
-
-darkModeBtn.addEventListener('click', () => {
-  darkModeBtn.classList.add('active')
-  lightModeBtn.classList.remove('active')
-  document.head.appendChild(link)
-})
-
-lightModeBtn.addEventListener('click', () => {
-  darkModeBtn.classList.remove('active')
-  lightModeBtn.classList.add('active')
-  document.head.removeChild(link)
-})
-
 // RADIO BATONY 
 
 const radioBtns = document.querySelectorAll('.radio-btn-input')
@@ -71,6 +50,9 @@ const forms = document.querySelectorAll('form')
 
 formInputs.forEach(formInput => {
   formInput.addEventListener('click', (e) => {
+      e.target.parentElement.classList.add('input-active')
+  })
+  formInput.addEventListener('focus', (e) => {
       e.target.parentElement.classList.add('input-active')
   })
 

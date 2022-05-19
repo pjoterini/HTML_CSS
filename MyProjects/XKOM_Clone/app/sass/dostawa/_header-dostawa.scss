@@ -9,63 +9,53 @@
     @include u.breakpoint-down(small) {
         flex-direction: column;
     }
-
-    .small-visible {
-        display: none;
-        margin-bottom: u.rem(20);
-
-        @include u.breakpoint-down(small) {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }        
-    }
-   
-    .small-none {
+    
+    .logo-and-darkmode {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         @include u.breakpoint-down(small) {
-            display: none;
-        }        
+            margin-bottom: u.rem(20);
+        }
+
+        .dark-mode {
+            margin-left: u.rem(20);
+            
+            i {
+                transform: scale(.8);
+                padding: u.rem(10);
+                border-radius: 50%;
+                color: var(--gray3);
+                cursor: pointer;
+            }
+    
+            i.active {
+                border: 3px solid var(--blue);
+            }
+        }
+    
+        .logo-container {
+            
+            .logo {
+                font-size: u.rem(40);
+                font-weight: 900;
+                color: var(--text);
+                position: relative;
+            }
+    
+            .logo::before {
+                content: 'Y';
+                font-size: u.rem(55);
+                    background: -webkit-linear-gradient(rgb(198, 76, 180), rgb(27, 194, 220), );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+            }
+        }
+    
     }
-
-    .dark-mode {
-        margin-left: u.rem(20);
-        
-        i {
-            transform: scale(.8);
-            padding: u.rem(10);
-            border-radius: 50%;
-            color: var(--gray3);
-            cursor: pointer;
-        }
-
-        i.active {
-            border: 3px solid var(--pink);
-        }
-    }
-
-    .logo-container {
-        
-        .logo {
-            font-size: u.rem(40);
-            font-weight: 900;
-            color: var(--text);
-            position: relative;
-        }
-
-        .logo::before {
-            content: 'Y';
-            font-size: u.rem(55);
-                background: -webkit-linear-gradient(rgb(198, 76, 180), rgb(27, 194, 220), );
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-        }
-    }
-
+    
     .etap {
         display: flex;
         justify-content: space-between;
