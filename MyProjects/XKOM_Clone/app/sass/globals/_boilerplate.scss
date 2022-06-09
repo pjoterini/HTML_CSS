@@ -3,7 +3,7 @@
 html {
     box-sizing: border-box;
     font-size: 100%;
-    overflow: auto;
+    overflow: visible;
 }
 
 *, *::before, *::after {
@@ -18,6 +18,8 @@ body {
     background-color: var(--background);
     color: var(--text);
     position: relative;
+    overflow: visible;
+    overflow-x: hidden;
 }
 
 .ui-container {

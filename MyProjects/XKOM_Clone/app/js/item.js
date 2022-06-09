@@ -29,8 +29,6 @@ addToCartBtn.addEventListener('click', () => {
     cartImgCounter.style.setProperty('--content',`'${localStorage['cartQuantity']}'`)
 
     cartImgCounter.style.setProperty('--visible', 'visible')
-
-
 })
 
 // BURGER MENU
@@ -42,7 +40,6 @@ hamburgerMenuBtn.addEventListener('click', () => {
     hamburgerMenuBtn.classList.toggle('hamburger-active')
     headerMenuItems.classList.toggle('small-device')
 })
-
 
 // WHY CART
 
@@ -88,7 +85,14 @@ searchInput.addEventListener('input', (e) => {
     if (value === '') {
         itemInfoContainer.classList.add('hide')
     }
-    
 })
 
+// ASYNC
 
+async function catchTestImg() {
+    const response = await fetch('/images/item-site/1.webp')
+    const blob = await response.blob()
+    document.getElementById('test-img').src = URL.createObjectURL(blob)
+}
+
+catchTestImg()

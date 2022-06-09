@@ -1,6 +1,7 @@
 // INITIALIZE LOCAL STORAGE
 
-// cart value
+// CART VALUE
+
 if (localStorage['cartQuantity'] == null) {
     localStorage.setItem('cartQuantity', '0')
 }
@@ -16,8 +17,6 @@ cartImgCounter.style.setProperty('--content',`'${localStorage['cartQuantity']}'`
 if (localStorage['cartQuantity'] > 0) {
     cartImgCounter.style.setProperty('--visible', 'visible');
 };
-
-
 
 // SEARCHBAR 
 
@@ -61,7 +60,7 @@ hamburgerMenuBtn.addEventListener('click', () => {
     headerMenuItems.classList.toggle('small-device')
 })
 
-// WHY CART
+// WHY CART - ON CLICK POPUP
 
 let openWhyBtn = document.querySelector('.open-why-btn')
 let whyCart = document.querySelector('.why-cart')
@@ -149,10 +148,7 @@ const changeSlide = (direction) => {
         })
             ST6.classList.add('active-slider-text')   
         }
-       
-       
     }
-    
     
     if(direction === 'left') {
         
@@ -200,14 +196,12 @@ const changeSlide = (direction) => {
             ST6.classList.add('active-slider-text')   
         }
     }
-    
 }
-
 
 // TIMER
 
 const countdown = () => {
-    const countDate = new Date('May 6, 2025 00:00:00').getTime();
+    const countDate = new Date('May 6, 2030 00:00:00').getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 

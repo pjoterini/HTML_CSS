@@ -1,6 +1,9 @@
 @use '../util' as u;
 
 .why-btn {
+    position: absolute;
+    height: 100%;
+    right: u.rem(-65);
 
     @include u.breakpoint-down(medium) {
         display: none;
@@ -15,11 +18,11 @@
     }
 
     .open-why-btn {
-        position: absolute;
-        padding: u.rem(30);
-        right: u.rem(-55);
+        position: sticky;
+        padding: u.rem(30) u.rem(40);
         top: 30vh;
         transform: rotate(-90deg);
+        
         background-color: var(--background-color);
         box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 10px -5px;
         border-radius: u.rem(14);
@@ -31,8 +34,8 @@
     }
 
     .why-cart {
-        position: absolute;
-        right: u.rem(10);
+        position: sticky;
+        padding-right: u.rem(20);
         top: 14vh;
         width: u.rem(150);
         display: flex;

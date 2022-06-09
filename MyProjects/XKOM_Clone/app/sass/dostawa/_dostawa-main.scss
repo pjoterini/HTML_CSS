@@ -7,6 +7,7 @@
         
     @include u.breakpoint-down(small) {
         margin-bottom: u.rem(20);
+        width: 90%;
     }
 
     .dostawa-grid {

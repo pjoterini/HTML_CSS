@@ -123,27 +123,35 @@
     }
 }
 
-.thank-you-modal {
+.thank-you-modal-parent {
+    position: absolute;
+    height: 100%;
     top: 0;
-    position: sticky;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color:var(--header);
-    opacity: .9;
-    z-index: 5;
 
-    h3 {
-        margin-top: u.rem(15);
-        text-decoration: underline;
-        color: var(--pink);
+    .thank-you-modal {
+        top: u.rem(0);
+        position: sticky;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color:var(--header);
+        opacity: .9;
+        z-index: 5;
+    
+        h3 {
+            margin-top: u.rem(15);
+            text-decoration: underline;
+            color: var(--pink);
+        }
+    }
+
+    .hide {
+        display: none;
     }
 }
 
-.hide {
-    display: none;
-}
+
